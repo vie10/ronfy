@@ -1,5 +1,7 @@
 # Ronfy — simple runtime config container
 
+[![](https://jitpack.io/v/vie10/ronfy.svg)](https://jitpack.io/#vie10/ronfy)
+
 Provides ability to storage your configurations in runtime easy and beautiful. Also makes config reloading simple.
 
 ### Example
