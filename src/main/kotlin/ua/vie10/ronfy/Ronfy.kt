@@ -23,6 +23,7 @@ object Ronfy : Iterable<Any>, Closeable {
 
     /**
      * Loads the object of the class from Ronfy if has been uploaded.
+     * Avoid storing it in a variable! This way you'll lose the ability to use new object once it's uploaded.
      * @receiver The class of the object you're looking for.
      * @return The uploaded object or null if wasn't uploaded.
      */
