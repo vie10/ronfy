@@ -2,11 +2,11 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.6.21"
-    publishing
+    `maven-publish`
 }
 
 group = "ua.vie10"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
@@ -24,6 +24,14 @@ tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-tasks.wrapper {
-    version = "7.4.2"
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "ua.vie10"
+            artifactId = "ronfy"
+            version = version
+
+            from(components["java"])
+        }
+    }
 }
