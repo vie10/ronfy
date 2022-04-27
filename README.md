@@ -16,7 +16,7 @@ class MyApplication : Application {
 
 class Notifier {
 
-    // Look at this. It's a variable with custom getter. Avoid storing the config in variable.
+    // Look at this. It's a variable with custom getter. Ensure you're always using this way.
     private val config: Config get() = Config::class.loadFromRonfy()
 
     fun notify(text: String) {
